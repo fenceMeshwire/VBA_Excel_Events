@@ -1,6 +1,6 @@
 Option Explicit
 
-' General operation of the Worksheet_Change method.
+' General operation of the Worksheet_Change event.
 ' Insert this code to the Worksheet where it is to be executed, e.g. 'Sheet1'
 ' The idea is to perform a specific action when something has changed within a certain range:
 
@@ -19,7 +19,8 @@ Option Explicit
 Private Sub Worksheet_Change(ByVal Target As Range)
 
 Dim rngCell As Range
-
+  
+' Specific inputs automatically generate defined outputs in the neighboring cell of the same row.
 For Each rngCell In Target.Cells
   If rngCell.Column = 1 Then
     Select Case rngCell.Value
