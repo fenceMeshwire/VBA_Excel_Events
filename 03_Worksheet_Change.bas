@@ -2,6 +2,19 @@ Option Explicit
 
 ' General operation of the Worksheet_Change method.
 ' Insert this code to the Worksheet where it is to be executed, e.g. 'Sheet1'
+' The general idea is to perform a specific action when something has changed within a certain range:
+
+' Private Sub Worksheet_Change(ByVal Target As Range)
+' Dim rngCell As Range
+' For Each rngCell In Target.Cells
+'   If rngCell.Column = 1 Then ' Column = 1 for column "A"
+'     ... further conditions, check for values, etc. ...:
+'     If rngCell.Offset(0, 1).Value = "" Then ' e.g. the neighboring cell is empty
+'       ... perform a specific action ...
+'     End If
+'   End If
+' Next rngCell
+' End Sub
 
 Private Sub Worksheet_Change(ByVal Target As Range)
 
