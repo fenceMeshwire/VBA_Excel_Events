@@ -2,7 +2,7 @@ Option Explicit
 
 ' General operation of the Worksheet_Change method.
 ' Insert this code to the Worksheet where it is to be executed, e.g. 'Sheet1'
-' The general idea is to perform a specific action when something has changed within a certain range:
+' The idea is to perform a specific action when something has changed within a certain range:
 
 ' Private Sub Worksheet_Change(ByVal Target As Range)
 ' Dim rngCell As Range
