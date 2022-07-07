@@ -1,12 +1,16 @@
 Option Explicit
 
+' Place this code at the ThisWorkbook level within the VBAProject.
+' Purpose: Log user activity when opening the workbook.
+' Note: The table tbl_logfile must be created first.
+
 Private Sub Workbook_BeforeSave _
 (ByVal SaveAsUI As Boolean, Cancel As Boolean)
 
 Dim lngNextCell As Long
 Dim wksSheet As Worksheet
 
-Set wksSheet = tbl_Logfile
+Set wksSheet = tbl_logfile
 
 lngNextCell = wksSheet.Cells(wksSheet.Rows.Count, 1).End(xlUp).Row + 1
 
