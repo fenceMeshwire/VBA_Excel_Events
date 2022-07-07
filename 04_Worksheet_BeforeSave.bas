@@ -2,7 +2,7 @@ Option Explicit
 
 ' Place this code at the ThisWorkbook level within the VBAProject.
 ' Purpose: Log user activity when saving the workbook.
-' Note: The table tbl_logfile must be created first.
+' Note: The table tbl_logfile_change must be created first.
 
 Private Sub Workbook_BeforeSave _
 (ByVal SaveAsUI As Boolean, Cancel As Boolean)
@@ -10,7 +10,7 @@ Private Sub Workbook_BeforeSave _
 Dim lngNextCell As Long
 Dim wksSheet As Worksheet
 
-Set wksSheet = tbl_logfile
+Set wksSheet = tbl_logfile_change
 
 lngNextCell = wksSheet.Cells(wksSheet.Rows.Count, 1).End(xlUp).Row + 1
 
