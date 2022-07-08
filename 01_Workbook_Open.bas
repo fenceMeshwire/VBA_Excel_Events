@@ -6,7 +6,7 @@ Option Explicit
 
 Private Sub Workbook_Open()
 
-Dim lngCellFree As Long
+Dim lngNextCell As Long
 Dim strUsername As String
 
 strUsername = "Your_Username"
@@ -20,11 +20,13 @@ With tbl_logfile
     .Cells(1, 2).Value = "Time"
     .Cells(1, 3).Value = "Username"
     .Cells(1, 4).Value = "Hostname"
-    lngCellFree = .Cells(.Rows.Count, 1).End(xlUp).Row + 1
-    .Cells(lngCellFree, 1).Value = Date
-    .Cells(lngCellFree, 2).Value = Time
-    .Cells(lngCellFree, 3).Value = Environ("username")
-    .Cells(lngCellFree, 4).Value = Environ("computername")
+    .Cells(1, 5).Value = "Operation"
+    lngNextCell = .Cells(.Rows.Count, 1).End(xlUp).Row + 1
+    .Cells(lngNextCell, 1).Value = Date
+    .Cells(lngNextCell, 2).Value = Time
+    .Cells(lngNextCell, 3).Value = Environ("username")
+    .Cells(lngNextCell, 4).Value = Environ("computername")
+    .Cells(lngNextCell, 5).Value = "opened workbook"
     .Visible = xlSheetVeryHidden
     ThisWorkbook.Save
 End With
