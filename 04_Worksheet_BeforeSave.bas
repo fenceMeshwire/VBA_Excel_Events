@@ -10,7 +10,7 @@ Private Sub Workbook_BeforeSave _
 Dim lngNextCell As Long
 Dim wksSheet As Worksheet
 
-Set wksSheet = tbl_logfile_change
+Set wksSheet = tbl_logfile
 
 With wksSheet
     .Visible = xlSheetVisible
