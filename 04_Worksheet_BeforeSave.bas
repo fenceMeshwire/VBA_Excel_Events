@@ -1,8 +1,9 @@
 Option Explicit
 
 ' Place this code at the ThisWorkbook level within the VBAProject.
-' Purpose: Log user activity when saving the workbook.
 ' Note: The table tbl_logfile must be created first.
+
+' Purpose: Log user activity when saving the workbook.
 
 Private Sub Workbook_BeforeSave _
 (ByVal SaveAsUI As Boolean, Cancel As Boolean)
