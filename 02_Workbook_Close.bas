@@ -8,7 +8,10 @@ Private Sub Workbook_BeforeClose(Cancel As Boolean)
 
 Application.DisplayAlerts = False
 
-tbl_logfile.Visible = xlSheetVeryHidden
+If tbl_logfile.Visible = xlSheetVisible Then
+  tbl_logfile.Visible = xlSheetVeryHidden
+End If
+
 ThisWorkbook.Save
 
 Application.DisplayAlerts = True
