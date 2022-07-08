@@ -25,6 +25,7 @@ With wksSheet
     .Cells(lngNextCell, 3).Value = Environ("username")
     .Cells(lngNextCell, 4).Value = Environ("computername")
     .Cells(lngNextCell, 5).Value = "saved changes"
+    .Columns.AutoFit
     .Visible = xlSheetVeryHidden
 End With
 
