@@ -12,16 +12,20 @@ Dim wksSheet As Worksheet
 
 Set wksSheet = tbl_logfile_change
 
-lngNextCell = wksSheet.Cells(wksSheet.Rows.Count, 1).End(xlUp).Row + 1
-
 With wksSheet
-  .Cells(1, 1).Value = "User"
-  .Cells(1, 2).Value = "Operation"
-  .Cells(1, 3).Value = "Date, Time"
-  .Cells(lngNextCell, 1).Value = Environ("username")
-  .Cells(lngNextCell, 2).Value = "saved changes"
-  .Cells(lngNextCell, 3).Value = Now()
-  .Columns.AutoFit
+    .Visible = xlSheetVisible
+    .Cells(1, 1).Value = "Date"
+    .Cells(1, 2).Value = "Time"
+    .Cells(1, 3).Value = "Username"
+    .Cells(1, 4).Value = "Hostname"
+    .Cells(1, 5).Value = "Operation"
+    lngNextCell = .Cells(.Rows.Count, 1).End(xlUp).Row + 1
+    .Cells(lngNextCell, 1).Value = Date
+    .Cells(lngNextCell, 2).Value = Time
+    .Cells(lngNextCell, 3).Value = Environ("username")
+    .Cells(lngNextCell, 4).Value = Environ("computername")
+    .Cells(lngNextCell, 5).Value = "saved changes"
+    .Visible = xlSheetVeryHidden
 End With
 
 End Sub
