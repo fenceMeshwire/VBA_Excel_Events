@@ -2,7 +2,7 @@ Option Explicit
 
 ' Place this code at the ThisWorkbook level within the VBAProject.
 ' In order to be executed, the WorkSheet tbl_logfile has to exist and 
-' the procedure "01_Workbook_Open.bas" must be implemented (s. this repository)
+' a procedure like "01_Workbook_Open.bas" should be implemented (s. this repository)
 
 ' Purpose: Finally hide the WorkSheet tbl_logfile if made visible by an administrator.
 
