@@ -4,7 +4,7 @@ Option Explicit
 ' In order to be executed, the WorkSheet tbl_logfile has to exist and 
 ' the procedure "01_Workbook_Open.bas" must be implemented (s. this repository)
 
-' Purpose: Finally hide the WorkSheet tbl_logfile if made visible by an administrator previously.
+' Purpose: Finally hide the WorkSheet tbl_logfile if made visible by an administrator.
 
 Private Sub Workbook_BeforeClose(Cancel As Boolean)
 
