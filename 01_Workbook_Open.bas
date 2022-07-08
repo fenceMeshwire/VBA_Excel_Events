@@ -27,6 +27,7 @@ With tbl_logfile
     .Cells(lngNextCell, 3).Value = Environ("username")
     .Cells(lngNextCell, 4).Value = Environ("computername")
     .Cells(lngNextCell, 5).Value = "opened workbook"
+    .Columns.AutoFit
     .Visible = xlSheetVeryHidden
     ThisWorkbook.Save
 End With
